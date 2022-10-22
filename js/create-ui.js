@@ -18,7 +18,7 @@
 import toCapitalize from "../utils/to-capitalize.js";
 import projectLinks from "../utils/project-links.js";
 
-let data = [...projectLinks];
+let data = [...projectLinks].sort((a, b) => b.id - a.id);
 
 /**
  * ### HEAD TITLE
@@ -34,6 +34,7 @@ title.textContent = toCapitalize(projectLinks.find((project) => project.href ===
 
 const SourceCodeLink = document.createElement("a");
 SourceCodeLink.href = projectLinks.find((project) => project.href === location.href).sourceCode;
+SourceCodeLink.target = "_blank";
 SourceCodeLink.className = "source-code-link";
 SourceCodeLink.innerHTML = `
   <img src="${location.origin + "/assets/icons/github-logo-black.png"}" alt="github-logo-black" class="source-code-link-img" />
