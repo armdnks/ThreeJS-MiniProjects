@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Basic / WebGI</title>
+    <link rel="stylesheet" href="../../css/create-ui.css" />
+
+    <style>
+      #webgi-canvas {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>Basic WebGI</noscript>
+
+    <canvas id="webgi-canvas"></canvas>
+
+    <!-- Install Packages -->
+    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+    <script async type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.143.0/build/three.module.js",
+          "OrbitControls": "https://unpkg.com/three@0.143.0/examples/jsm/controls/OrbitControls.js",
+          "webgi": "https://dist.pixotronics.com/webgi/runtime/bundle-0.5.8.mjs"
+        }
+      }
+    </script>
+
+    <!-- Main Script -->
+    <script src="../../js/create-ui.js" type="module"></script>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
