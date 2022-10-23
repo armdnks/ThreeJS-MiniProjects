@@ -27,6 +27,13 @@ const projectLinks = [
     imageSrc: location.origin + "/assets/thumbnails/basic-lightning-01.jpg",
     sourceCode: "https://github.com/armdnks/ThreeJS-MiniProjects/tree/main/project-basics/lightning-01",
   },
+  {
+    id: 5,
+    title: "basic / webgi",
+    href: location.origin + "/project-basics/webgi-01/index.html",
+    imageSrc: location.origin + "/assets/thumbnails/basic-webgi-01.jpg",
+    sourceCode: "https://github.com/armdnks/ThreeJS-MiniProjects/tree/main/project-basics/webgi-01",
+  },
 ];
 
 export default projectLinks;

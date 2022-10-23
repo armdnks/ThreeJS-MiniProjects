@@ -25,7 +25,8 @@ let data = [...projectLinks].sort((a, b) => b.id - a.id);
  */
 
 const title = document.querySelector("title");
-title.textContent = toCapitalize(projectLinks.find((project) => project.href === location.href).title);
+const titleString = projectLinks.find((project) => project.href === location.href).title;
+title.textContent = toCapitalize(titleString);
 
 /**
  * ### SOURCE CODE LINK
