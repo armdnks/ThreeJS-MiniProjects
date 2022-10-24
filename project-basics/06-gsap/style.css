@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#three-canvas-container {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+#three-canvas {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.section-container {
+  height: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-zero-info {
+  position: absolute;
+  text-align: center;
+  bottom: 5rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #fff;
+
+  animation: jump 1s ease-in-out infinite;
+}
+
+.section-zero-info-text {
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes jump {
+  0% {
+    transform: translate(-50%, 0);
+  }
+
+  50% {
+    transform: translate(-50%, 0.5rem);
+  }
+
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
