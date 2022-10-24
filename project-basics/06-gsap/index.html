@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>basic / gsap</title>
+    <link rel="stylesheet" href="../../css/create-ui.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <noscript>Basic / Gsap</noscript>
+
+    <section class="section-zero">
+      <div class="section-zero-info">
+        <p class="section-zero-info-text">scroll down</p>
+        <svg width="40" height="15" class="section-zero-info-icon">
+          <polyline fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="none" points="40,0 20,15 0,0 " />
+        </svg>
+      </div>
+    </section>
+
+    <section class="section-one"></section>
+
+    <section class="section-two"></section>
+
+    <section class="section-three"></section>
+
+    <section class="section-four"></section>
+
+    <div id="three-canvas-container">
+      <canvas id="three-canvas"></canvas>
+    </div>
+
+    <!-- Install Packages -->
+
+    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.143.0/build/three.module.js",
+          "OrbitControls": "https://unpkg.com/three@0.143.0/examples/jsm/controls/OrbitControls.js",
+          "GLTFLoader": "https://unpkg.com/three@0.143.0/examples/jsm/loaders/GLTFLoader.js",
+          "RGBELoader": "https://unpkg.com/three@0.143.0/examples/jsm/loaders/RGBELoader.js",
+          "gsap": "https://unpkg.com/gsap@3.11.3/all.js"
+        }
+      }
+    </script>
+    <!-- Main Script -->
+    <script src="../../js/create-ui.js" type="module"></script>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

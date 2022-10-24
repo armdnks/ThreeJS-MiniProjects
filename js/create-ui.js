@@ -98,6 +98,12 @@ NavigationBtn.innerHTML = `
 
 NavigationBtn.onclick = function () {
   Navigation.classList.toggle("show");
+
+  if (Navigation.classList.contains("show")) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
 };
 
 document.body.appendChild(NavigationBtn);
