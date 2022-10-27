@@ -39,7 +39,7 @@ const projectLinks = [
     title: "basic / gsap",
     href: location.origin + "/project-basics/06-gsap/index.html",
     imageSrc: location.origin + "/assets/thumbnails/basic-gsap-01.jpg",
-    sourceCode: "https://github.com/armdnks/ThreeJS-MiniProjects/tree/main/project-basics/05-webgi",
+    sourceCode: "https://github.com/armdnks/ThreeJS-MiniProjects/tree/main/project-basics/06-gsap",
   },
 ];
 
