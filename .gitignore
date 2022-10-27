@@ -1,2 +1,4 @@
-_private
+_private/
 .DS_Store
+.vscode/
+development/
