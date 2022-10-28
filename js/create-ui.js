@@ -62,22 +62,9 @@ class CreateUI {
     this.navigationForm = this.NavigationForm();
     this.navigationProjectList = this.NavigationProjectList();
 
-    this.arrayFunctions = [this.HeadTitle(), this.NavigationBtn(), this.navigationProjectItem(this.projects)];
+    this.arrayFunctions = [this.HeadTitle(), this.SourceCodeLink(), this.NavigationBtn(), this.navigationProjectItem(this.projects)];
     this.combineFunctions(this.arrayFunctions);
   }
-
-  /*
-   async fetchProjects() {
-     try {
-       const res = await fetch(location.origin + "/files.json");
-       const data = await res.json();
- 
-       return (this.data = data);
-     } catch (error) {
-       console.log(error);
-     }
-   }
- */
 
   /**
    * ### COMBINE FUNCTIONS
@@ -99,6 +86,29 @@ class CreateUI {
     const title = document.querySelector("title");
     const existingProject = this.projects.find((project) => project.href === location.href);
     return (title.textContent = toCapitalize(existingProject ? existingProject.title : title.textContent));
+  }
+
+  /**
+   * ### SOURCE CODE LINK
+   * @type Component
+   * @desc Create source code link
+   */
+
+  SourceCodeLink() {
+    const SourceCodeLink = document.createElement("a");
+    const existingProject = projectLinks.find((project) => project.href === location.href);
+
+    SourceCodeLink.href = existingProject ? existingProject.sourceCode : "#";
+    SourceCodeLink.target = existingProject ? "_blank" : null;
+    SourceCodeLink.className = "source-code-link";
+    SourceCodeLink.innerHTML = `
+      <img src="${location.origin + "/assets/icons/github-logo-black.png"}" alt="github-logo-black" class="source-code-link-img" />
+      <svg height="300" width="300" class="source-code-link-svg">
+        <polygon points="300,0 0,0 300,300" class="source-code-link-svg-shape" />
+      </svg>
+    `;
+
+    return this.container.appendChild(SourceCodeLink);
   }
 
   /**
