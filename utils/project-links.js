@@ -9,9 +9,9 @@ const projectLinks = [
   {
     id: 2,
     title: "basic / orbit controls",
-    href: location.origin + "/project-basics/02-orbit-controls/index.html",
+    href: location.origin + "/project-basics/02-controls/index.html",
     imageSrc: location.origin + "/assets/thumbnails/basic-orbit-controls-01.jpg",
-    sourceCode: "https://github.com/armdnks/ThreeJS-MiniProjects/tree/main/project-basics/02-orbit-controls",
+    sourceCode: "https://github.com/armdnks/ThreeJS-MiniProjects/tree/main/project-basics/02-controls",
   },
   {
     id: 3,
@@ -40,6 +40,13 @@ const projectLinks = [
     href: location.origin + "/project-basics/06-gsap/index.html",
     imageSrc: location.origin + "/assets/thumbnails/basic-gsap-01.jpg",
     sourceCode: "https://github.com/armdnks/ThreeJS-MiniProjects/tree/main/project-basics/06-gsap",
+  },
+  {
+    id: 7,
+    title: "basic / skybox",
+    href: location.origin + "/project-basics/07-skybox/index.html",
+    imageSrc: location.origin + "/assets/thumbnails/basic-skybox-01.jpg",
+    sourceCode: "https://github.com/armdnks/ThreeJS-MiniProjects/tree/main/project-basics/07-skybox",
   },
 ];
 

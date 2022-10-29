@@ -13,7 +13,12 @@ const scene = new THREE.Scene(); // Create scene
  * - far — Camera frustum far plane.
  */
 
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const fov = 75;
+const aspect = window.innerWidth / window.innerHeight;
+const near = 0.1;
+const far = 1000;
+
+const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
 camera.position.z = 5; // Adjust camera position
 
 /**
@@ -39,7 +44,9 @@ const geometry = new THREE.BoxGeometry(2, 2, 2);
  * ### Texture Map
  * @url https://github.com/mrdoob/three.js/tree/master/examples/textures
  */
-const texture = new THREE.TextureLoader().load("../../assets/textures/crate-texture-01.jpg");
+
+const texturePath = "../../assets/textures/crate-texture-01.jpg";
+const texture = new THREE.TextureLoader().load(texturePath);
 const material = new THREE.MeshBasicMaterial({ map: texture });
 
 /**
@@ -60,8 +67,8 @@ function animate() {
   requestAnimationFrame(animate);
 
   // Cube rotation animation
-  // cube.rotation.x += 0.01;
-  cube.rotation.y += 0.01;
+  cube.rotation.x += 0.01;
+  cube.rotation.y -= 0.01;
 
   renderer.render(scene, camera); // render 3D to browser
 }
